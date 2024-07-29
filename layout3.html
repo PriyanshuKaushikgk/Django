@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(65, 64, 64);
+      }
+
+      .container{
+
+        height: 100vh;
+      }
+
+      header{
+
+        height: 10%;
+        background-color: rgb(153, 33, 245);
+      }
+
+      main{
+
+        height: 80%;
+        background-color: aqua;
+        display: flex;
+      }
+
+      footer{
+
+        height: 10%;
+        background-color: rgb(153, 33, 245);
+      }
+
+      .left{
+
+        width: 20%;
+        background-color: red;
+      }
+
+      .right{
+
+        width: 80%;
+        background-color: brown;
+      }
+
+      .uper{
+
+        height: 50%;
+        background-color: yellow;
+      }
+
+      .niche{
+        height: 50%;
+        background-color: green;
+        display: flex;
+      }
+
+      .inner-niche{
+
+        width: 50%;
+        background-color: black;
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <main>
+        <div class="left"></div>
+        <div class="right">
+            <div class="uper"></div>
+            <div class="niche">
+                <div class="inner-niche"></div>
+                <div class="inner-niche"></div>
+            </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>
