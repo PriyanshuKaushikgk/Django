@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+            
+        
+        .container{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            animation-name: box;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        @keyframes box{
+            from{
+                width: 150px;
+                height: 150px;
+                left: 0px;
+                top: 0px;
+                background-color: red;
+
+            }
+            to{
+                width: 300px;
+                height: 300px;
+                left: 300px;
+                top: 300px;
+                background-color: yellow;
+                border-radius: 50%;
+            }
+
+            0%{
+                left: 0px;
+                top: 0px;
+                box-shadow: 0px 0px 100px blue;
+                transform: rotate(0deg);
+                background: url(klassy-logo.png);
+            }
+            25%{
+                left: 0px;
+                top: 400px;
+                background-color: red;
+                box-shadow: 0px 0px 100px yellow;
+                transform: rotate(90deg);
+                background: url(pexels-anjana-c-169994-674010.jpg);
+
+
+            }
+             /* 50%{
+                left: 250px;
+                top: 250px;
+                background-color: violet;
+                box-shadow: 0px 0px 100px green;
+                transform: rotate(180deg);
+                background: url(klassy-logo.png);
+
+            }  */
+            75%{
+                left: 250px;
+                top: 250px;
+                background-color: aqua;
+                box-shadow: 0px 0px 100px red;
+                transform: rotate(270deg);
+                background: url(klassy-logo.png);
+
+
+            }
+            100%{
+                left: 250px;
+                top: 0px;
+                background-color: brown;
+                box-shadow: 0px 0px 100px pink;
+                transform: rotate(360deg);
+                background: url(right\ side\ klssy\ cafe.jpg);
+
+
+            }
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1"></div>
+    </div>
+    
+</body>
+</html>
