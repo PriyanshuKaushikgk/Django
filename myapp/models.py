@@ -20,8 +20,11 @@ class Product(models.Model):
     image = models.ImageField(upload_to='media')
     size = models.CharField(max_length=10)
     category = models.CharField(choices=CATEGORY_CHOICE,max_length=50)
-    is_available = models.BooleanField(
+    is_available = models.BooleanField()
 
-    )
+    def __str__(self):
+        return self.title
+
+    
 
 
