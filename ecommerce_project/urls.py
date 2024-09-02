@@ -2,7 +2,7 @@
 URL configuration for ecommerce_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+    https://docs.djangoproject.com/en/5.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -23,5 +23,11 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/',views.index),
-    path('product/',views.product)
+    path('product/',views.product),
+    path('signup/',views.signuphandle),
+    path('login/',views.loginhandle),
+    path('Student/',views.Student),
+    path('description/<int:id>/',views.ProductDescription),
+    path('cart/<int:id>/',views.cart)
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    

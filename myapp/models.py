@@ -1,17 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 CATEGORY_CHOICE = [
+    
     ("mens","mens"),
-    ("women","women"),
+    ("womens","womens"),
     ("kids","kids"),
     ("electronic","electronic"),
     ("special_product","special_product")
 ]
-
-
-
 
 class Product(models.Model):
     title = models.CharField(max_length=50)
@@ -20,11 +19,24 @@ class Product(models.Model):
     image = models.ImageField(upload_to='media')
     size = models.CharField(max_length=10)
     category = models.CharField(choices=CATEGORY_CHOICE,max_length=50)
-    is_available = models.BooleanField()
-
+    is_avaliable = models.BooleanField()
+    
     def __str__(self):
         return self.title
-
     
 
-
+class Cart(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+    quantity = models.IntegerField()
+    
+    
+class StudentRegisteration(models.Model):
+    FullName = models.CharField(max_length=50)
+    Email = models.EmailField()
+    Roll_no = models.IntegerField()
+    Mobile_No = models.IntegerField()
+    Address = models.TextField()
+    Pin_code = models.IntegerField()
+    Image = models.ImageField(upload_to='media')
+    
